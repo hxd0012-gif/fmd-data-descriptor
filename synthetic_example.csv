@@ -1,0 +1,6 @@
+height_cm,weight_kg,waist_cm,hip_cm,apoa1_g_l,apob_g_l,hdl_mmol_l,total_cholesterol_mmol_l,mitral_e_m_s,annular_e_m_s,mitral_a_m_s,cigarettes_per_day,smoking_years,alcohol_g_per_day,drinking_years,brachial_d0_cm,brachial_d1_cm,brachial_d2_cm,tibial_d0_cm,tibial_d1_cm,tibial_d2_cm,lvdd_cm,ivst_cm,lvpwt_cm,cardiac_output_l_min,subject_id,record_id,is_index_record,brachial_d0_cm_qualifier
+170,65,80,95,1.4,0.9,1.2,4.5,0.7,0.1,0.6,10,5,20,3,0.4,0.424,0.46,0.3,0.321,0.345,4.8,0.9,0.9,5,SYNTHETIC_001,SYNTHETIC_EXAM_001,1,
+170,65,80,95,1.4,0.9,1.2,4.5,0.7,0.1,0.6,10,5,20,3,0.4,,0.46,0.3,0.321,0.345,4.8,0.9,0.9,5,SYNTHETIC_002,SYNTHETIC_EXAM_002,1,
+170,65,80,95,1.4,0.9,1.2,4.5,0.7,0.1,0.6,10,5,20,3,0,0.424,0.46,0.3,0.321,0.345,4.8,0.9,0.9,5,SYNTHETIC_003,SYNTHETIC_EXAM_003,1,
+170,65,80,95,1.4,0.9,1.2,4.5,0.7,0.1,0.6,10,5,20,3,0.4,0.424,0.46,0.3,0.321,0.345,4.8,0.9,0.9,5,SYNTHETIC_004,SYNTHETIC_EXAM_004,1,<
+170,65,80,95,1.4,0.9,1.2,4.5,0.7,0.1,0.6,10,5,20,3,0.4,0.424,0.46,0.3,0.321,0.345,4.8,0.9,0.9,5,SYNTHETIC_005,SYNTHETIC_EXAM_005,1,=

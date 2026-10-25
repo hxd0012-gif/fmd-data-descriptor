@@ -1,0 +1,15 @@
+{
+  "title": "Vascular function dataset: documentation, synthetic examples and code",
+  "version": "0.1.0-preparation",
+  "repository": "https://github.com/hxd0012-gif/fmd-data-descriptor",
+  "code_doi": null,
+  "data_repository": "OMIX",
+  "data_accession": null,
+  "data_status": "not_deposited_pending_institutional_approval",
+  "patient_data_in_this_public_package": false,
+  "local_preparation_counts": {
+    "participants": 1814,
+    "examinations": 2392
+  },
+  "approved_shared_release_counts": null
+}

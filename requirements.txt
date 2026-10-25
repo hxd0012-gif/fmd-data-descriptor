@@ -1,0 +1,2 @@
+matplotlib>=3.7,<4
+# recompute.py and validate.py use only the Python 3.10+ standard library.

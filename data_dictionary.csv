@@ -1,0 +1,144 @@
+variable,label_zh,unit_or_type,file,definition_and_processing_zh,release_note_zh,missing_value
+subject_id,随机患者编号,string,examinations.csv,FMD + 12位随机十六进制；不能据此追溯身份。同一受检者的跨次关联已按研究负责人确认归并；既有随机编号优先保留。,保留随机关联编号；表述为去标识/假名化；身份映射仅由机构私密保存,empty CSV field; not zero
+record_id,随机检查编号,string,examinations.csv,同次检查跨表副本共用一个编号。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+visit_sequence,患者内记录顺序,integer,examinations.csv,优先按已知日期排序；未定日期记录置后，不能推定其真实时间。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+visit_timing,时间类型,category,examinations.csv,index_dated/index_undated/later_dated/same_day_repeat/repeat_order_unknown；同日重复不等于纵向随访。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+days_from_index,距索引检查天数,day,examinations.csv,精确日期已移除；有可靠日期时保留患者内时间差；未知为缺失。,保留可靠相对天数；128条无日期记录保持缺失；不补造日期,empty CSV field; not zero
+index_period,索引检查五年时间段,category,examinations.csv,仅保留首个可定日期检查的五年分段，非每次检查精确年份。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+sex,性别,category,examinations.csv,M=男；F=女；未知缺失。原库1/2与文本男/女按重复记录交叉验证。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+age_years,检查时年龄,year,examinations.csv,>=90记为90并设置age_topcoded=1；无依据的异常年龄不修猜。,沿用90岁截顶；未成年人共享依据和全程年龄缺失者资格先核实；不推算年龄填值,empty CSV field; not zero
+age_topcoded,高龄截顶标记,0/1,examinations.csv,1=年龄至少90岁；0=年龄小于90；未知缺失。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+source_file_count,同次检查来源文件数,integer,examinations.csv,仅反映来源覆盖，不代表独立重复检测次数。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+source_copy_count,同次检查合并源行数,integer,examinations.csv,多个重叠历史表的复制行数，不是样本量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+medication_documented,存在用药文字记录,1/blank,examinations.csv,1=源行有记录，包括写无；空白=未见记录，不能当未用药。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+medication_names_recorded,用药记录中的字面药名,string,examinations.csv,封闭白名单提取的药品或商品名；不推断实际使用、剂量、疗程或药理分类；品牌未强制转换。,只保留已提取的白名单药名字面值；公开导出前复查；不推定用药暴露或未用药,empty CSV field; not zero
+height_cm,身高（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+weight_kg,体重（kg）,kg,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+hypertension_duration_years,高血压病程(年）,年,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+diabetes_duration_years,糖尿病病程（年）,年,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+sbp_mmhg,SBP（mmHg）,mmHg,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+dbp_mmhg,DBP（mmHg）,mmHg,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+heart_rate_bpm,HR（bpm）,bpm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+cigarettes_per_day,每日吸烟数（支）,支,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+smoking_years,吸烟史（年）,年,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+smoking_cessation_years,戒烟史（年）,年,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+alcohol_g_per_day,平均每日摄入酒精量（g/日）,g/日,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+drinking_years,饮酒史（年）,年,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+alcohol_cessation_years,戒酒史（年）,年,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+waist_cm,腰围（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+hip_cm,臀围（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+family_hypertension_code,高血压家族史(1:有，2:无),1:有，2:无,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 1=有；2=无；原值0无法解释，已置缺失。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+family_diabetes_code,糖尿病家族史(1:有，2:无),1:有，2:无,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 1=有；2=无；原值0无法解释，已置缺失。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+brachial_d0_cm,右肱D0（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 D0为受检者当次检查的基础血管内径。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+tibial_d0_cm,胫前D0（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 D0为受检者当次检查的基础血管内径。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+brachial_d1_cm,右肱D1（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+tibial_d1_cm,胫前D1（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+brachial_d2_cm,右肱D2（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 D2为舌下含服硝酸甘油0.5 mg后的内径，剂量经研究负责人确认。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+tibial_d2_cm,胫前D2（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 D2为舌下含服硝酸甘油0.5 mg后的内径，剂量经研究负责人确认。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+cimt_cm,CIMT（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+lvdd_cm,LVDD（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+lvds_cm,LVDS（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ivst_cm,IVST（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+lvpwt_cm,LVPWT（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+aod_cm,AOD（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+lad_cm,LAD（cm）,cm,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+lvedv_ml,LVVD（ml）,ml,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+lvesv_ml,LVVS（ml）,ml,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+stroke_volume_ml,SV（ml）,ml,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+cardiac_output_l_min,CO（L/min）,L/min,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+fs_pct,FS（%）,%,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 是来源报告值；只在同次几何或对应副本支持时将分数转换为百分数。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ef_pct,EF（%）,%,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 是来源报告值；只在同次几何或对应副本支持时将分数转换为百分数。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+annular_a_m_s,a（m/s）,m/s,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+annular_e_m_s,e（m/s）,m/s,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+mitral_a_m_s,PVA（m/s）,m/s,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+mitral_e_m_s,PVE（m/s）,m/s,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+glucose_mmol_l,GLU（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+triglycerides_mmol_l,TG（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+total_cholesterol_mmol_l,CHO（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+hdl_mmol_l,HDL（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ldl_mmol_l,LDL（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+vldl_mmol_l,VLDL(mmol/l),mmol/l,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+apoa1_g_l,APOA1（g/L）,g/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+apob_g_l,APOB（g/L）,g/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+lipoprotein_a_mg_l,LP(a)（mg/L）,mg/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,依据原表头修正字典单位a为mg/L；数值保持不变,empty CSV field; not zero
+ffa_ueq_l,FFA（uEq/L）,uEq/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+alt_u_l,ALT（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ast_u_l,AST（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ggt_u_l,GGT（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ldh_u_l,LDH（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+tbil_umol_l,TBIL（μmol/L）,μmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+dbil_umol_l,DBIL（μmol/L）,μmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ibil_umol_l,IBIL（μmol/L）,μmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+total_protein_g_l,TP（g/L）,g/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+albumin_g_l,ALB（g/L）,g/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+globulin_g_l,GLO（g/L）,g/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+albumin_globulin_ratio,A/G,见原表；未完全说明,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+alp_u_l,ALP（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+tba_umol_l,TBA（μmol/L）,μmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+cholinesterase_u_l,CHE（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+five_nt_u_l,5'-NT（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ada_source,ADA（mmol/L）,原表标mmol/L；疑似错误，单位待核实,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+ck_u_l,CK（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+ckmb_u_l,CKMB（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+alpha_hbd_u_l,a-HBD（U/L）,U/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+bun_mmol_l,BUN（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+creatinine_umol_l,CR（μmol/L）,μmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+uric_acid_umol_l,UA（μmol/L）,μmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+calcium_mmol_l,CA（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+phosphate_mmol_l,P（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+magnesium_mmol_l,Mg（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+iron_source,Fe（mmol/L）,原表标mmol/L；疑似错误，单位待核实,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+co2cp_mmol_l,CO2CP（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+anion_gap_mmol_l,AG（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+potassium_mmol_l,K（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+sodium_mmol_l,Na（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+chloride_mmol_l,Cl（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+wbc_10e9_l,WBC(×109),×109,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+rbc_source,RBC(×109),原表×109与旧表10^12矛盾；单位待核实,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+hemoglobin_g_l,Hb（g/L）,g/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+platelets_10e9_l,PLT(×109),×109,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+fibrinogen_g_l,Fg（g/L）,g/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+cystatin_c_mg_l,CYSC（mg/L）,mg/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+gfr_source,GFR（ml/min）,原表ml/min；估算方法及是否标化未知,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+hscrp_mg_l,hs-CRP（mg/L）,mg/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+hba1c_pct,HbA1C（%）,%,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+postprandial_glucose_mmol_l,餐后2hGlu（mmol/L）,mmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+homocysteine_umol_l,HCY（μmol/L）,μmol/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_a1m_mg_l,A1M（mg/L）,mg/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_tru_mg_l,TRU（mg/L）,mg/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_igu_mg_l,IgU（mg/L）,mg/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_albumin_mg_l,A1bU（mg/L）,mg/L,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+cimt_contralateral_source,对侧颈A内-中层厚度,源表未说明单位,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+glucose_test_method_code,1OGTT2普3馒头餐,见原表；未完全说明,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 1=OGTT；2=普（原文）；3=馒头餐；2的确切方案待补充。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+rhi,RHI,见原表；未完全说明,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+urine_protein_creatinine_mg_g,尿蛋白/尿肌酐（mg/g）,mg/g,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+angiotensin_i_ng_ml,血管紧张素Ⅰ（ng/ml）,ng/ml,examinations.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+pra_source,血浆肾素活性（PRA）,源表未说明单位,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+aldosterone_source,醛固酮（ALD）,源表未说明单位,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+ogtt_source,OGTT,数值的具体含义/单位待核实,unresolved_source_fields.csv,保留同次检查一致的数值；冲突或确认错误置缺失；无跨次填补。 仅保留源数值，定义/单位需作者核对。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+bmi_calc,BMI（重算）,kg/m2,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 weight_kg / (height_cm/100)^2,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+bsa_m2_calc,体表面积（按原库主导公式重算）,m2,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 0.0061*height_cm + 0.0128*weight_kg - 0.1529,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+waist_hip_ratio_calc,腰臀比（重算）,ratio,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 waist_cm / hip_cm,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+smoking_index_cig_years_calc,吸烟指数（重算）,cigarette-years,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 cigarettes_per_day * smoking_years,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+alcohol_cumulative_g_day_years_calc,累积饮酒量（重算）,g/day*years,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 alcohol_g_per_day * drinking_years,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+fmd_brachial_pct_calc,肱动脉FMD（重算）,%,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 100*(brachial_d1_cm-brachial_d0_cm)/brachial_d0_cm,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+fmd_tibial_pct_calc,胫前动脉FMD（重算）,%,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 100*(tibial_d1_cm-tibial_d0_cm)/tibial_d0_cm,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+nid_brachial_pct_calc,肱动脉非内皮依赖性舒张（重算）,%,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 100*(brachial_d2_cm-brachial_d0_cm)/brachial_d0_cm,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+nid_tibial_pct_calc,胫前动脉非内皮依赖性舒张（重算）,%,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 100*(tibial_d2_cm-tibial_d0_cm)/tibial_d0_cm,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+cardiac_index_l_min_m2_calc,心指数（重算）,L/min/m2,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 cardiac_output_l_min / bsa_m2_calc,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+lvm_g_calc,左室质量（ASE线性法重算）,g,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 0.8*1.04*((lvdd_cm+ivst_cm+lvpwt_cm)^3-lvdd_cm^3)+0.6,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+lvmi_g_m2_calc,左室质量指数（重算）,g/m2,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 lvm_g_calc / bsa_m2_calc,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+e_over_eprime_calc,E/e（重算）,ratio,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 mitral_e_m_s / annular_e_m_s,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+e_over_a_calc,E/A（重算）,ratio,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 mitral_e_m_s / mitral_a_m_s,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+apoa1_apob_ratio_calc,APOA1/APOB（重算）,ratio,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 apoa1_g_l / apob_g_l,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+hdl_total_cholesterol_ratio_calc,HDL/CHO（重算）,ratio,derived_measures.csv,同次检查重算；冻结为数值；缺失/受限值/分母0不计算。 hdl_mmol_l / total_cholesterol_mmol_l,按同次检查原始测量重算；公开公式；缺失不计算；逐值复算验证,empty CSV field; not zero
+hscrp_mg_l_qualifier,测量关系符号,category,examinations.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+homocysteine_umol_l_qualifier,测量关系符号,category,examinations.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_a1m_mg_l_qualifier,测量关系符号,category,examinations.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_tru_mg_l_qualifier,测量关系符号,category,examinations.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_igu_mg_l_qualifier,测量关系符号,category,examinations.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+urine_albumin_mg_l_qualifier,测量关系符号,category,examinations.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+angiotensin_i_ng_ml_qualifier,测量关系符号,category,examinations.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,保留测量值和现有编码；不跨次填值；保留缺失和检测界限,empty CSV field; not zero
+pra_source_qualifier,测量关系符号,category,unresolved_source_fields.csv,=为精确值；< > ≤ ≥与主数值共同解释，主数值为检测界限，不是精确测量。,单列源值及已知限制；定义未明前不作标准化换算或核心验证,empty CSV field; not zero
+qc_flags,处理与质量标记,string,examinations.csv,分号分隔；完整代码和含义见处理说明。空白不代表临床验证通过。,保留受控质控标记并生成逐检查逐字段flags表；原始值和源行映射留机构内,empty CSV field; not zero
+is_index_record,索引检查标记,0/1,examinations.csv,1=原sheet1索引记录；0=原sheet2额外记录。索引不保证时间可定。,由已核验的sheet成员关系生成,not permitted

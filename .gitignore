@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+data/
+private/
+examinations.csv
+derived_measures.csv
+unresolved_source_fields.csv
+quality_flags.csv
+*.xls
+*.xlsx
+*.zip
+.env
