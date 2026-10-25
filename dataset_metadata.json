@@ -4,8 +4,8 @@
   "repository": "https://github.com/hxd0012-gif/fmd-data-descriptor",
   "code_doi": "10.5281/zenodo.23642711",
   "data_repository": "OMIX",
-  "data_accession": null,
-  "data_status": "not_deposited_pending_platform_verification",
+  "data_accession": "OMIX022554",
+  "data_status": "archived_waiting_for_curation_not_released",
   "patient_data_in_this_public_package": false,
   "local_preparation_counts": {
     "participants": 1814,
@@ -22,5 +22,20 @@
     "date": "2026-10-25"
   },
   "bioproject": "PRJCA078013",
-  "bioproject_status_observed": "finished_confidential_2026-10-25"
+  "bioproject_status_observed": "finished_confidential_2026-10-25",
+  "data_record_url": "https://ngdc.cncb.ac.cn/omix/release/OMIX022554",
+  "data_access": "Controlled-access",
+  "data_deposition_date": "2026-10-25",
+  "deposited_file_count": 4,
+  "deposited_counts": {
+    "participants": 1814,
+    "examinations": 2392
+  },
+  "configured_release_date": "2026-10-25",
+  "actually_released": false,
+  "post_curation_access_workflow_verified": false,
+  "unauthenticated_record_access_observed": "not_released_no_file_download_links",
+  "unauthenticated_management_access_observed": "redirected_to_cncb_login",
+  "ethics_basis_confirmed_by_depositor": "retrospective_ethics_approval_and_waiver_of_informed_consent",
+  "individual_written_data_sharing_consent_claimed": false
 }
