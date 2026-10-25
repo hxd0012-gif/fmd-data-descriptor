@@ -2,9 +2,9 @@
 
 Version 0.1.0-preparation, 25 October 2026.
 
-This repository contains a data dictionary, quality codebook, deterministic recomputation code and entirely synthetic examples for a retrospective vascular function resource. It contains no participant-level records. The local preparation baseline contains 1,814 participants and 2,392 examinations collected within the author-confirmed window 1 August 2000 to 6 June 2016; these are provisional preparation counts, not the size of an approved shared release.
+This repository contains a data dictionary, quality codebook, deterministic recomputation code and entirely synthetic examples for a retrospective vascular function resource. It contains no participant-level records. The local preparation baseline contains 1,814 participants and 2,392 examinations collected within the author-confirmed window 1 August 2000 to 6 June 2016; these counts describe the prepared, hospital-authorized sharing population; OMIX deposition and file-access verification remain pending.
 
-Participant-level data are planned for OMIX controlled access, subject to institutional approval, eligibility review and verification of the access route. No OMIX accession or data DOI has been issued for this project. See [ACCESS.md](ACCESS.md). The code archive DOI is also pending.
+Participant-level data are planned for OMIX controlled access, following institutional sharing authorization and verification of the platform requirements and access route. The depositor confirmed approval covering all 1,814 participants and 2,392 examinations on 25 October 2026. BioProject metadata have been registered as `PRJCA078013`; this is not an OMIX data accession. No OMIX accession or patient-data DOI has been issued for this project. See [ACCESS.md](ACCESS.md). The fixed code release is publicly archived at [10.5281/zenodo.23642711](https://doi.org/10.5281/zenodo.23642711), corresponding to GitHub tag [v0.1.0-preparation](https://github.com/hxd0012-gif/fmd-data-descriptor/releases/tag/v0.1.0-preparation) and commit `63a1bb6263ac6d35b18eb165add60a24cde6c333`. This main-branch status update was made after archiving; the original archive is preserved unchanged.
 
 ## Run the synthetic example
 

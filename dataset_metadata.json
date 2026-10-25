@@ -1,15 +1,26 @@
 {
-  "title": "Vascular function dataset: documentation, synthetic examples and code",
+  "title": "Vascular function dataset: documentation, synthetic examples and reproducible code",
   "version": "0.1.0-preparation",
   "repository": "https://github.com/hxd0012-gif/fmd-data-descriptor",
-  "code_doi": null,
+  "code_doi": "10.5281/zenodo.23642711",
   "data_repository": "OMIX",
   "data_accession": null,
-  "data_status": "not_deposited_pending_institutional_approval",
+  "data_status": "not_deposited_pending_platform_verification",
   "patient_data_in_this_public_package": false,
   "local_preparation_counts": {
     "participants": 1814,
     "examinations": 2392
   },
-  "approved_shared_release_counts": null
+  "approved_shared_release_counts": null,
+  "code_archived_commit": "63a1bb6263ac6d35b18eb165add60a24cde6c333",
+  "code_release_url": "https://github.com/hxd0012-gif/fmd-data-descriptor/releases/tag/v0.1.0-preparation",
+  "institutional_sharing_approval": "confirmed_by_depositor_2026-10-25",
+  "shared_population_scope_confirmed_by_depositor": {
+    "participants": 1814,
+    "examinations": 2392,
+    "includes_recorded_minor_and_all_age_missing_participants": true,
+    "date": "2026-10-25"
+  },
+  "bioproject": "PRJCA078013",
+  "bioproject_status_observed": "finished_confidential_2026-10-25"
 }

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "Cite this preparation code version; the final code DOI is pending."
-title: "Vascular function dataset: documentation, synthetic examples and code"
+message: "Cite the fixed preparation code version archived in Zenodo."
+title: "Vascular function dataset: documentation, synthetic examples and reproducible code"
 version: 0.1.0-preparation
 date-released: 2026-10-25
 type: software
@@ -9,3 +9,4 @@ authors:
     given-names: Xiaodong
 repository-code: "https://github.com/hxd0012-gif/fmd-data-descriptor"
 license: MIT
+doi: "10.5281/zenodo.23642711"
