@@ -1,11 +1,12 @@
-# Controlled access status
+# Controlled access
 
-Four participant-level files were deposited in OMIX on 25 October 2026 under accession OMIX022554, linked to BioProject PRJCA078013. The owner record displays Controlled-access; each file displays HTTP Archived. The submission is Archived and Waiting for Curation. It is not yet released, and no patient-data DOI is claimed.
+OMIX022554 was released on 27 October 2026 under Controlled-access:
+https://ngdc.cncb.ac.cn/omix/release/OMIX022554
 
-The deposited population contains 1,814 participants and 2,392 examinations. The depositor confirmed hospital sharing approval covering the full population, including the recorded minor and participants with no recorded age. The declared ethics basis is approval with a waiver of informed consent for a retrospective study; individual written data-sharing consent is not claimed. These statements reflect depositor confirmation; the approval and waiver documents were not independently reviewed during repository preparation.
+Use “Request for this Data” on the public OMIX record. Participant-level data require an approved application and the applicable data-use agreement. Scientific/data-access contact: Liangdi Xie (ldxield@163.com). Approval must cover the intended research use. Public metadata and code do not constitute an unrestricted data license.
 
-The [OMIX record](https://ngdc.cncb.ac.cn/omix/release/OMIX022554) currently reports that the data are not released when accessed without login. The management URL redirects an unauthenticated visitor to CNCB login. The [OMIX policy](https://ngdc.cncb.ac.cn/omix/term_and_policy) requires submitter authorization before controlled files may be downloaded, including after release. No unrestricted patient-data download is authorized.
+The dataset concerns a retrospective study approved by the ethics committee of The First Affiliated Hospital of Fujian Medical University, approval MRCTA, ECFAH of FMU [2020]306, with a waiver of informed consent. The depositor has confirmed hospital approval for controlled sharing of the 1,814-participant, 2,392-examination population. Individual written data-sharing consent is not claimed.
 
-Institutionally approved access must involve a research application, approval by the authorized data custodian and an approved data-use agreement. The planned scientific custodian is Liangdi Xie under institutional authorization. The current platform submitter is Xiaodong Huang. A separate platform custodian role, final agreement, decision criteria, sustainable contact route and anonymous journal-review access have not yet been configured or verified. No access deadline is promised. These details will be added after platform curation and institutional confirmation.
+The 29 October 2026 v3 correction package has not yet replaced the released files. See DATA_USAGE_v3.md for the revision schema and verify the downloaded version and hashes against the intended analysis.
 
-No patient records, identity mappings, original dates or source workbooks are available through GitHub or the public [Zenodo software archive](https://doi.org/10.5281/zenodo.23642711). The software license grants no participant-data rights. The observed controls establish the current access state, not a completed security audit or a guarantee about future release settings.
+Do not attempt re-identification, contact participants, or redistribute participant-level data to unauthorized users. Identity mapping and identifiable source materials are not included in this repository.
